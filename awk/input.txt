@@ -1,0 +1,3 @@
+tcpdump:x:72:72::/:/sbin/nologin
+weifeng:x:1000:1000:weifeng:/home/weifeng:/bin/bash
+mysql:x:994:991:MySQL server:/var/lib/mysql:/bin/bash

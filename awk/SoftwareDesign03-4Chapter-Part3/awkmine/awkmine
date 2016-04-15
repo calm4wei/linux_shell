@@ -1,0 +1,2 @@
+#!/bin/sh
+awk -f awkmine.awk -f lib_term.awk "$@"

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+for i in `cat /etc/hosts |grep datacube2 |awk '{print $2}'`; 
+do 
+#    /usr/bin/ssh $i /bin/ls /opt/java
+    /usr/bin/ssh $i /bin/mkdir /opt/java 2>&1 ;
+    scp -r /opt/java/jdk1.8.0_51  root@$i:/opt/java/;
+    scp -r /etc/profile root@$i:/etc/;
+    /usr/bin/ssh $i source /etc/profile;
+
+done
+
